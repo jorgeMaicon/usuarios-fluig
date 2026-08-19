@@ -103,10 +103,6 @@ src/main/
 | Frontend | FreeMarker, jQuery, DataTables |
 | Servidor | WildFly/JBoss (Fluig) |
 
-## Desenvolvimento
-
-Para agentes de IA e contribuidores, consulte [AGENTS.md](./AGENTS.md) — contém detalhes de arquitetura, convenções e pontos de atenção.
-
 ## Licença
 
 Projeto interno — consulte o responsável antes de redistribuir.
