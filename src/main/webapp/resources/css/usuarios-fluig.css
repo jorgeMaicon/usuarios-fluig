@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  background: #f4f6f8;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+#usuariosFluigApp {
+  background: #f4f6f8;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  padding: 24px 0;
+}
+
+#usuariosFluigApp .container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#usuariosFluigApp .topo {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#usuariosFluigApp .topo h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+#usuariosFluigApp .acoes-topo {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+#usuariosFluigApp .indicadores {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.acoes-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#btnExportar,
+#btnOcultarColunas {
+  border: 0;
+  border-radius: 6px;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+#btnExportar:hover,
+#btnOcultarColunas:hover {
+  background: #0b5ed7;
+}
+
+#btnExportar:disabled,
+#btnOcultarColunas:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ocultar-colunas-wrapper {
+  position: relative;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.indicador-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+}
+
+.indicador-label {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.indicador-valor {
+  font-size: 26px;
+  line-height: 1;
+  color: #111827;
+}
+
+.painel-ocultar {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 30;
+}
+
+.painel-ocultar.hidden {
+  display: none;
+}
+
+.painel-ocultar h2 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.lista-ocultar-colunas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.item-coluna {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.item-coluna input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  margin: 0 8px 0 0 !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
+  accent-color: #0d6efd;
+  cursor: pointer !important;
+  transform: none !important;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  display: inline-block !important;
+  appearance: auto !important;
+}
+
+.item-coluna input[type="checkbox"] + span {
+  margin: 0 !important;
+  display: inline !important;
+  line-height: 1.2 !important;
+  vertical-align: middle !important;
+}
+
+.tabela-wrapper {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.loading-overlay.hidden {
+  display: none;
+}
+
+.loading-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #cbd5e1;
+  border-top-color: #0d6efd;
+  border-radius: 50%;
+  animation: giro 0.8s linear infinite;
+}
+
+@keyframes giro {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#tabelaColleague th,
+#tabelaColleague td {
+  white-space: nowrap;
+}
+
+.status-ativo {
+  font-weight: 700;
+}
+
+.status-ativo-sim {
+  color: #198754;
+}
+
+.status-ativo-nao {
+  color: #dc3545;
+}
+
+@media (max-width: 980px) {
+  #usuariosFluigApp .topo {
+    flex-wrap: wrap;
+  }
+
+  #usuariosFluigApp .topo h1 {
+    font-size: 42px;
+  }
+
+  .indicadores {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #usuariosFluigApp .topo h1 {
+    font-size: 34px;
+  }
+
+  .indicadores {
+    grid-template-columns: 1fr;
+  }
+}

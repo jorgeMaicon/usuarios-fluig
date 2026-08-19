@@ -1,0 +1,14 @@
+# Credenciais de integracao com o Fluig
+fluig.companyId=1
+fluig.login=user_integracao
+fluig.colleagueId=user_integracao
+fluig.password=SUA_SENHA_AQUI
+
+# URL base do ambiente Fluig
+fluig.baseUrl=https://seu-tenant.fluig.cloudtotvs.com.br/
+
+# Credenciais OAuth (opcional, reservado para evolucoes futuras)
+fluig.consumer_key=consumerKey
+fluig.consumer_secret=consumerSecret
+fluig.access_token=seu_access_token
+fluig.token_secret=seu_token_secret

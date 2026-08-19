@@ -1,0 +1,27 @@
+# Build
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+.factorypath
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cursor / agentes (nao versionar)
+.cursor/
+**/.cursor/
+agent-transcripts/
+AGENTS.md
+
+# Credenciais locais (usar config.properties.example como base)
+src/main/resources/config.properties
